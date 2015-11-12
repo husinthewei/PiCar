@@ -35,3 +35,9 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.ecf.re
 
 !ENTRY de.fu_berlin.inf.dpp 2 0 2015-11-12 11:13:42.305
 !MESSAGE unexpected method call (NullSarosSession.java:64)
+
+!ENTRY de.fu_berlin.inf.dpp 2 0 2015-11-12 11:17:10.060
+!MESSAGE unexpected method call (NullSarosSession.java:64)
+
+!ENTRY de.fu_berlin.inf.dpp 2 0 2015-11-12 11:17:10.064
+!MESSAGE unexpected method call (NullSarosSession.java:64)
