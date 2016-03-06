@@ -44,6 +44,7 @@ public static int[] movements = {0,0,0,0};
 		createFrame(demo);
 		serverSocket = new DatagramSocket(3141);
 		byte[] receiveData = new byte[1024];
+		
 		while (true) {
 			demo.repaint();
 			
@@ -60,8 +61,8 @@ public static int[] movements = {0,0,0,0};
 			//protocol:
 			//forwards/backwards/left/right
 			//Ex: 1011
-			
-			
+			String msg = movements[0] + "" + movements[1] + "" + movements[2] + "" + movements[3];
+			SendSomething(msg);
 			}
 	}
 
@@ -74,7 +75,7 @@ public static int[] movements = {0,0,0,0};
 		g2d.drawRect(47, 20, 300, 300);
 		g2d.drawString("This is where the webcam video will go", 85, 100);
 		
-		g2d.drawString("Use arrow keys to move", 110, 400);
+		g2d.drawString("Use wasd to move", 110, 400);
 		g2d.drawString("   ^   ", 140, 424);
 		g2d.drawString("<- | ->", 136, 430);
 		g2d.drawString("   v    ", 140, 440);
