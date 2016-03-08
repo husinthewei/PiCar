@@ -78,12 +78,12 @@ def analyzeIn(msg):
         stop()
         
     if(msg[2:3] == "1"):
-        left()
-    if(msg[2:3] == "1"):
         right()
+    if(msg[3:4] == "1"):
+        left()
         
 while(True):
     msg = UDPCom()
     print "received message:", msg
     analyzeIn(msg) 
-    time.sleep(0.5) 
+    time.sleep(0.10) 
