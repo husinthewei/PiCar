@@ -4,9 +4,10 @@ import select
 import RPi.GPIO as GPIO
 
 #UDP_IP = "10.170.67.252" (school)
-UDP_IP = "192.168.1.10"
+UDP_IP = "192.168.1.9"
 UDP_PORT = 3141
-MESSAGE = "Hi"
+MESSAGE = "REQ"
+#http://www.bytecreation.com/blog/2013/10/13/raspberry-pi-ultrasonic-sensor-hc-sr04
 
 A1 = 7
 A2 = 8
@@ -78,9 +79,9 @@ def analyzeIn(msg):
         stop()
         
     if(msg[2:3] == "1"):
-        right()
-    if(msg[3:4] == "1"):
         left()
+    if(msg[3:4] == "1"):
+        right()
         
 while(True):
     msg = UDPCom()
