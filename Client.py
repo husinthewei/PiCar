@@ -4,7 +4,7 @@ import select
 import RPi.GPIO as GPIO
 
 #UDP_IP = "10.170.67.252" (school IP)
-UDP_IP = "192.168.1.10"
+UDP_IP = "192.168.1.4"
 UDP_PORT = 3141
 MESSAGE = "REQ"
 
@@ -119,6 +119,10 @@ def doDistanceFeature():
         back()
     if(a < 20):        
         forward()
+    if(a < 20 and b < 20 and  b < a):      #if one side is closer than the other while they are both "dangerous" 
+        back()                              #move away from the closer side
+    if(a < 20 and b < 20 and  a < b):      
+        forward()    
         
 while(True):             #main loop. Cycles every 0.1 seconds
     msg = UDPCom()       #gets the message. Has a 2 second timeout.
